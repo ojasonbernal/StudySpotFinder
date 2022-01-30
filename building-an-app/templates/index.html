@@ -1,34 +1,32 @@
-<!doctype html>
-<!--
- Copyright 2021 Google LLC
+{% extends "base.html" %}
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+{% block content %}
+    <form action="/form1-data" method = "POST">
+        <h5>How long do you plan to use this table?</h5>
+       <!-- <input type="radio" id="vax-yes" name="vaccinated" value="yes" required>
+        <label for="vax-yes">Yes</label>
+        <input type="radio" id="vax-no" name="vaccinated" value="no" required>
+        <label for="vax-no">No</label><br><br>  -->
 
-      http://www.apache.org/licenses/LICENSE-2.0
+        <h5>How many seats do you need?</h5>
+        <!-- <input type="radio" id="age-yes" name="age" value="yes" required>
+        <label for="age-yes">Yes</label>
+        <input type="radio" id="age-no" name="age" value="no" required>
+        <label for="age-no">No</label><br><br>      --> 
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
+        <h5>If you indicated that you don't need all the seats, would you mind if someone used the available seats?</h5>
+       <!-- <input type="radio" id="indoors-yes" name="indoors" value="yes" required>
+        <label for="indoors-yes">Yes</label>
+        <input type="radio" id="indoors-no" name="indoors" value="no" required>
+        <label for="indoors-no">No</label><br><br>   -->
 
-<html>
-<head>
-  <title>Datastore and Firebase Auth Example</title>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+       <!---<h5>Are you or is someone in your household at an elevated risk?</h5>
+        <input type="radio" id="hr-yes" name="hr" value="yes" required>
+        <label for="hr-yes">Yes</label>
+        <input type="radio" id="hr-no" name="hr" value="no" required>
+        <label for="hr-no">No</label><br><br>  -->
 
-  <h1>Datastore and Firebase Auth Example</h1>
+        <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit"> 
+    </form>
+{% endblock %}
 
-  <h2>Last 10 visits</h2>
-  {% for time in times %}
-    <p>{{ time }}</p>
-  {% endfor %}
-
-</body>
-</html>
