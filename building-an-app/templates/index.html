@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
+
     <form action="/form1-data" method = "POST">
         <h5>How long do you plan to use this table?</h5>
        <!-- <input type="radio" id="vax-yes" name="vaccinated" value="yes" required>
@@ -20,13 +23,22 @@
         <input type="radio" id="indoors-no" name="indoors" value="no" required>
         <label for="indoors-no">No</label><br><br>   -->
 
-       <!---<h5>Are you or is someone in your household at an elevated risk?</h5>
-        <input type="radio" id="hr-yes" name="hr" value="yes" required>
+        <h5>Are you or is someone in your household at an elevated risk?</h5>
+       <!-- <input type="radio" id="hr-yes" name="hr" value="yes" required>
         <label for="hr-yes">Yes</label>
         <input type="radio" id="hr-no" name="hr" value="no" required>
         <label for="hr-no">No</label><br><br>  -->
 
         <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit"> 
     </form>
+    
+    <table>
+      <thead><tr><th>Table Label</th><th>Availability</th></tr></thead>
+      <tbody>
+      <tr><td>x</td><td>z</td></tr>
+      <tr><td>x</td><td>z</td></tr>
+      <tr><td>x</td><td>z</td></tr>
+      </tbody>
+      </table>
 {% endblock %}
 
